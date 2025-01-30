@@ -8,50 +8,61 @@ Este proyecto es una aplicación de comercio electrónico que permite a los usua
 
 - Navegar por diferentes categorías de productos.
 - Ver un catálogo de productos.
-- Visualizar un carrito de compras con un conteo de productos (por ahora hardcodeado).
+- Visualizar detalles de un producto específico.
+- Ver un carrito de compras con un conteo de productos.
 - Preparar la base para futuras funcionalidades como agregar productos al carrito, gestión de usuarios, pagos, etc.
 
 ## Características Principales
 
-- *Barra de Navegación (NavBar):*
-  - Lista de categorías clickeables (aún sin funcionalidad de redirección).
-  - Logo de la tienda, por el momento solo el titulo.
-  - Icono del carrito de compras siempre visible.
-  
-- *Widget del Carrito (CartWidget):*
-  - Icono de carrito.
-  - Indicador numérico (hardcodeado) mostrando la cantidad de productos en el carrito.
+### Navegación
 
-- *Contenedor de Productos (ItemListContainer):*
-  - Recibe una prop greeting y muestra un mensaje de bienvenida.
-  - Preparado para mostrar una lista de productos en el futuro.
+- *Barra de Navegación (NavBar):*
+  - Lista de categorías clickeables.
+  - Logo de la tienda que redirige a la página principal.
+  - Icono del carrito de compras siempre visible.
+
+- *Ruteo con React Router:*
+  - /: Muestra el catálogo completo de productos.
+  - /category/:categoryId: Muestra los productos filtrados por categoría.
+  - /item/:itemId: Muestra el detalle de un producto específico.
+
+### Componentes
+
+- *NavBar:* Barra de navegación con enlaces a categorías y carrito.
+- *ItemListContainer:* Contenedor que muestra la lista de productos.
+- *ItemDetailContainer:* Contenedor que muestra el detalle de un producto.
+- *Item:* Componente que muestra la información básica de un producto.
+- *ItemDetail:* Componente que muestra información detallada de un producto.
+- *CartWidget:* Icono del carrito con contador de productos.
 
 ## Tecnologías Utilizadas
 
-- *React*: Biblioteca para construir interfaces de usuario.
-- *Vite*: Herramienta de desarrollo rápida que proporciona un servidor de desarrollo y empaquetado eficiente.
-- *JavaScript (JSX)*: Para construir los componentes de React.
-- *CSS*: Para estilizar los componentes y la aplicación.
-- *HTML*: Estructura básica de la aplicación en el archivo index.html.
+- *React:* Biblioteca para construir interfaces de usuario.
+- *React Router DOM:* Biblioteca para manejar ruteo y navegación en la aplicación.
+- *Vite:* Herramienta de desarrollo rápida que proporciona un servidor de desarrollo y empaquetado eficiente.
+- *JavaScript (JSX):* Para construir los componentes de React.
+- *CSS:* Para estilizar los componentes y la aplicación.
+- *HTML:* Estructura básica de la aplicación en el archivo index.html.
 
-## Estructura del Proyecto
+## Estructura del Proyecto
 
-- *node_modules/*: módulos.
-- *src/*: Carpeta principal del código fuente.
-  - *components/*: Contiene los componentes reutilizables de la aplicación.
-    - *NavBar.jsx*: Componente de la barra de navegación.
-    - *CartWidget.jsx*: Componente del icono del carrito.
-    - *ItemListContainer.jsx*: Componente contenedor para mostrar productos.
-  - *App.jsx*: Componente principal que integra los componentes.
-  - *App.css*: Estilos para la aplicación.
-  - *index.css*: Estilos globales adicionales.
-  - *main.jsx*: Punto de entrada de la aplicación.
-- *public/*: Archivos públicos y activos estáticos.
-- *package.json*: Información del proyecto y dependencias.
-- *vite.config.js*: Configuración de Vite.
+- node_modules/: Módulos de Node.js.
+- src/: Carpeta principal del código fuente.
+  - components/: Contiene los componentes reutilizables de la aplicación.
+    - NavBar.jsx
+    - CartWidget.jsx
+    - ItemListContainer.jsx
+    - ItemDetailContainer.jsx
+    - Item.jsx
+    - ItemDetail.jsx
+  - App.jsx: Componente principal que integra los componentes.
+  - App.css: Estilos para la aplicación.
+  - index.css: Estilos globales adicionales.
+  - main.jsx: Punto de entrada de la aplicación.
+- public/: Archivos públicos y activos estáticos.
+- package.json: Información del proyecto y dependencias.
+- vite.config.js: Configuración de Vite.
 
 ## Uso de la Aplicación
 
-Al abrir la aplicación, deberías ver la barra de navegación en la parte superior con el logo de la tienda, las categorías y el icono del carrito con un número fijo.
-Debajo de la barra de navegación, verás el mensaje de bienvenida proporcionado por ItemListContainer.
-Actualmente, las categorías y el carrito no tienen funcionalidad interactiva, pero sirven como base para futuras implementaciones.
+Al abrir la aplicación, verás la barra de navegación en la parte superior con el logo de la tienda, las categorías y el icono del carrito con un número fijo. Puedes navegar entre categorías, ver el catálogo completo de productos y acceder al detalle de cada uno de ellos clickeando en el producto
