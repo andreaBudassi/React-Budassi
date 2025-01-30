@@ -53,7 +53,7 @@ export const products = [
         categoria: "tv",
         stock: 10,
         precio: 1099000,
-        imagen: "images / tv - philips.png"
+        imagen: "images/tv-philips.png"
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ export const products = [
         categoria: "audio",
         stock: 3,
         precio: 125000,
-        imagen: "images / xiaomi - audio.png"
+        imagen: "images/xiaomi-audio.png"
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ export const products = [
         categoria: "audio",
         stock: 6,
         precio: 22000,
-        imagen: "images / redmi - audio.png"
+        imagen: "images/redmi-audio.png"
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ export const products = [
         categoria: "audio",
         stock: 7,
         precio: 35000,
-        imagen: "images / crow - audio.png"
+        imagen: "images/crow-audio.png"
     },
     {
         id: 11,
@@ -85,7 +85,7 @@ export const products = [
         categoria: "impresoras",
         stock: 5,
         precio: 585000,
-        imagen: "images / multifuncion.png"
+        imagen: "images/multifuncion.png"
     },
     {
         id: 12,
