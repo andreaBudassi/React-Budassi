@@ -3,22 +3,33 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx';
+import Cart from './components/Cart.jsx';
+import Checkout from './components/Checkout.jsx';
 import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        {/* Ruta para el catálogo completo */}
-        <Route path="/" element={<ItemListContainer greeting="¡Bienvenidos a mi tienda online!" />} />
-        {/* Ruta para categorías */}
-        <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        {/* Ruta para detalle de producto */}
-        <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-      </Routes>
-    </BrowserRouter>
-  );
+return (
+
+
+
+{/* Catálogo completo /}
+<Route
+path="/"
+element={
+
+}
+/>
+{/ Por categoría /}
+<Route path="/category/:categoryId" element={} />
+{/ Detalle de producto /}
+<Route path="/item/:itemId" element={} />
+{/ Carrito /}
+<Route path="/cart" element={} />
+{/ Checkout */}
+<Route path="/checkout" element={} />
+
+
+);
 }
 
 export default App;

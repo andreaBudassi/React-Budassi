@@ -100,3 +100,42 @@
   width: 300px;
   height: auto;
 }
+
+/* Estilos para ItemCount */
+.item-count {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  }
+  
+  /* Estilos para elementos del carrito */
+  .cart-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  }
+  
+  .cart-item-image {
+  width: 80px;
+  height: auto;
+  }
+  
+  /* Estilos para Checkout */
+  .checkout-details {
+  margin-bottom: 20px;
+  }
+  
+  .checkout-form input {
+  margin: 5px;
+  padding: 5px;
+  }
+  
+  .checkout-form button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  }
