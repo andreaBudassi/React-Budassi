@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer.jsx';
@@ -8,28 +8,27 @@ import Checkout from './components/Checkout.jsx';
 import './App.css';
 
 function App() {
-return (
+    return (
+        <Router>
+            <NavBar />
+            <Routes>
+                {/* Catálogo completo */}
+                <Route path="/" element={<ItemListContainer />} />
 
+                {/* Por categoría */}
+                <Route path="/category/:categoryId" element={<ItemListContainer />} />
 
+                {/* Detalle de producto */}
+                <Route path="/item/:itemId" element={<ItemDetailContainer />} />
 
-{/* Catálogo completo /}
-<Route
-path="/"
-element={
+                {/* Carrito */}
+                <Route path="/cart" element={<Cart />} />
 
-}
-/>
-{/ Por categoría /}
-<Route path="/category/:categoryId" element={} />
-{/ Detalle de producto /}
-<Route path="/item/:itemId" element={} />
-{/ Carrito /}
-<Route path="/cart" element={} />
-{/ Checkout */}
-<Route path="/checkout" element={} />
-
-
-);
+                {/* Checkout */}
+                <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
