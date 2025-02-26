@@ -12,19 +12,10 @@ function App() {
         <Router>
             <NavBar />
             <Routes>
-                {/* Catálogo completo */}
                 <Route path="/" element={<ItemListContainer />} />
-
-                {/* Por categoría */}
                 <Route path="/category/:categoryId" element={<ItemListContainer />} />
-
-                {/* Detalle de producto */}
                 <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-
-                {/* Carrito */}
                 <Route path="/cart" element={<Cart />} />
-
-                {/* Checkout */}
                 <Route path="/checkout" element={<Checkout />} />
             </Routes>
         </Router>

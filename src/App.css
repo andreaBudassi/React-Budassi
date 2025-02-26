@@ -62,14 +62,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
 /* Estilos para Item */
 .item-card {
+  width: 250px;
   border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
+  padding: 15px;
   text-align: center;
 }
 
